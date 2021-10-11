@@ -21,7 +21,36 @@ int main(int argc, char *argv[]) {
 		test_array[i] = atoi(argv[i+1]);
 	}
 	//Your codes here
-	
-	
+	int tg;
+	//the first half
+	for(i=0; i<(n/2);i++){
+		for(int j=i+1; j<(n/2);j++)
+		{
+			if (test_array[i]>test_array[j]) 
+			{
+				tg=test_array[i];
+				test_array[i]=test_array[j];
+				test_array[j]=tg;
+			}
+		}	
+	}
+
+	//the second half
+	for(i=n/2; i<(n);i++){
+		for(int j=i+1; j<n;j++)
+		{
+			if (test_array[i]<test_array[j]) 
+			{
+				tg=test_array[i];
+				test_array[i]=test_array[j];
+				test_array[j]=tg;
+			}
+		}	
+	}
+	// the result
+	for(i=0; i<n;i++)
+	{ 
+		 printf("%d ",test_array[i]);
+	}
 	return 0;
 }
