@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 	// the result
 	for(i=0; i<n;i++)
 	{ 
-		 printf("%d\t",test_array[i]);
+		 printf("%d ",test_array[i]);
 	}
 	return 0;
 }
