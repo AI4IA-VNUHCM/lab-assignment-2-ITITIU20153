@@ -19,7 +19,21 @@ int main(int argc, char *argv[]) {
 	int n = atoi(argv[1]);
 	int result;
 	//Your codes here
-	
+	result=1;
+	int a=1;
+	if (n%2!=0) {
+		while(a<=n) {
+			if (a&2!=0) (result*=a);
+			a++;
+		}
+	}
+	else 
+	{ 
+		while (a<=n) {
+			if (a%2==0) (result*=a);
+			a++;
+		}
+	}
 	printf("%d", result);
 	return 0;
 }
